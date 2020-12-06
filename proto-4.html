@@ -55,7 +55,7 @@
             margin-top: 4.5em;
             width: auto;
             height: 100%;
-            margin-left: 80%;
+            margin-left: 150%;
             z-index: -1;
         }
         .one{
@@ -69,7 +69,7 @@
         footer{
             grid-area: footer;
         }
-        .header-container a:link{
+.header-container a:link{
     text-decoration: none;
     
 }
@@ -341,9 +341,26 @@ footer{
     min-height: 39.5em;
 }
 .footer{
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    align-content: stretch;
+    align-content: stretch; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "box1 box2 box3 box4";
+}
+.footer .box-item.item-1{
+    grid-area: box1;
+}
+.footer .box-item.item-2{
+    grid-area: box2;
+}
+.footer .box-item.item-3{
+    grid-area: box3;
+}
+.footer .box-item.item-4{
+    grid-area: box4;
 }
 .footer .box-item{
     /* background-color: seashell; */
@@ -398,7 +415,7 @@ footer{
     width: 25em;
     padding: 2em;
     /* padding-bottom: 1em; */
-    
+    margin-left: 0em;
 }
 
 .one .item-2 h2{
@@ -544,6 +561,113 @@ footer{
     margin: 0px 1em;
 }
 
+
+
+@media only screen and (max-width: 550px) {
+    body{
+        width: 100vh;
+    }
+    .container{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+            "header"
+            "sect1"
+            "sect2"
+            "footer";
+            
+        }
+        header{
+            /* background-color: burlywood; */
+            
+            grid-area: header;
+        }
+        .img1{
+            display: none;
+        }
+        div .journey{
+            display: none;
+        }
+        .img2{
+            display: none;
+        }
+        .one{
+            
+            grid-area: sect1;
+        }
+        .two{
+            grid-area: sect2;
+            display: none;
+        }
+        footer{
+            grid-area: footer;
+        }
+        .header-container{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            ". part1 .";
+        }
+        .header-container .part-one{
+            grid-area: part1;
+        }
+        .header-container .part-two{
+            display: none;
+
+        }
+        .header-container .part-three{
+            display: none;
+        }
+        .header-container .part-four{
+            display: none;
+        }
+        .one .items{
+            margin: 4em;
+            margin-top: 5em;
+            margin-bottom: 0em;
+            width: 25em;
+            padding: 2em;
+            /* padding-bottom: 1em; */
+            margin-left: 10%;
+        }
+
+        .footer{
+            /* display: flex;
+            justify-content: space-around;
+            align-content: stretch; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "box1 box2 box3 ";
+        }
+        .footer .box-item.item-1{
+            grid-area: box1;
+        }
+        .footer .box-item.item-2{
+            grid-area: box2;
+        }
+        .footer .box-item.item-3{
+            grid-area: box3;
+        }
+        
+        footer .box-item.item-4{
+            display: none;
+            
+        }
+        .footer .box-item{
+            /* background-color: seashell; */
+            flex-flow: column;
+            min-width: 0px;
+            min-height: 200px;
+            margin: 4em;
+            margin-bottom: 3em;
+            display: flex;
+
+        }
+}
     </style>
 </head>
 <body>
