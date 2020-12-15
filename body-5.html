@@ -539,11 +539,110 @@ footer{
             width: 47em;
             background-color: #23164B;
             justify-content: center;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 5em auto auto auto auto;
+            grid-template-areas: 
+            "item-one item-two"
+            "item-three item-four"
+            "item-five item-six"
+            "item-seven item-eight"
+            "item-nine item-nine";
+        }
+        .two .content .item-one{
+            grid-area: item-one;
+            margin-left: 2em;
+        }
+        .two .content .item-two{
+            grid-area: item-two;
+        }
+        .two .content .item-three{
+            grid-area: item-three;
+        }
+        .two .content .item-four{
+            grid-area: item-four;
+        }
+        .two .content .item-five{
+            grid-area: item-five;
+        }
+        .two .content .item-six{
+            grid-area: item-six;
+        }
+        .two .content .item-seven{
+            grid-area: item-seven;
+        }
+        .two .content .item-eight{
+            grid-area: item-eight;
+        }
+        .two .content .item-nine{
+            grid-area: item-nine;
+        }
+        .two .content .item-one p{
+            color: white;
+            font-family: tahoma;
+            font-size: 24px;
+
+        }
+        .two .content .item-one span{
+            padding: 3px 11px;
+            background-color: white;
+            color: #342561;
+            border-radius: 50%;
+        }
+        .two .content .item-two p{
+            float: right;
+            margin: 30px 60px 0 0px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+
+        }
+        .two .content .item-two a{
+            text-decoration: none;
+            color: #00FFF5;
+            font-weight:500;
+            transition: .3s;
+        }
+        .two .content .item-two a:hover{
+            color: #00FFF5;
+        }
+        .two .content .item-nine input{
+            margin-left: 3em;
+            margin-top: 1em;
+        }
+        .two .content .item-nine label{
+            color: white;
+        }
+        .two .content .item-nine a{
+            text-decoration: none;
+            color: #00FFF5;
+            font-weight:500;
+            transition: .3s ;
+        }
+        .two .content .item-nine a:hover{
+            color: ;
+        }
+        .two .content .item-nine input[type="button"]{
+            
+            margin-left: 1.8em;
+            font-size: 22px;
+            color: white;
+            background-color: #4169E1;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            transition: .3s ease;
+        }
+        .two .content .item-nine input[type="button"]:hover{
+            color: #00FFF5;
+            background-color: #15416B;
+            box-shadow: 2px 2px 10px black ;
         }
     </style>
     <style>
         .two .content .input-field{
             margin-top: 2em;
+            margin-left: 2.8em;
             position: relative;
             height: 40px;
             width: 15em;
@@ -552,7 +651,8 @@ footer{
             position: absolute;
             background: transparent;
             border: none;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid #00FFF5;
+        
             outline: none;
             
             /* box-shadow: none; */
@@ -563,23 +663,25 @@ footer{
         .input-field label{
             position: absolute;
             top: 0;
-            left: 0;
-            color: #555;
+            left: 0px;
+            color: #00FFF5;
             pointer-events: none;
             transition: .5s;
 
         }
-        .input-field input[type="text"]:focus + input[type="text"]{
-            outline: black;
-        }
+        
         .input-field input[type="text"]:focus + label,
         .input-field input[type="text"]:valid + label{
             transform: translateY(-25px);
             font-size: 15px;
-            color: #00FFF5;
-            background: #15416B;
             
+            padding: 2px;
+            color: #23164B;
+            background: #00FFF5;
+            border-radius: 2px;
+
         }
+        
     </style>
 </head>
 <body>
@@ -990,7 +1092,7 @@ footer{
         <section class="two">
             <div class="content">
                 <div class="item-one">
-                    <h1><span>1</span> Account Details</h1>
+                    <p><span>1</span> Account Details</p>
                     
                 </div>
                 <div class="item-two">
@@ -1022,12 +1124,16 @@ footer{
                     <span></span>
                 </div>
                 <div class="input-field item-eight">
-                    <input type="text" name="" required="">
+                    <input type="text" name="" required>
                     <label for="">Mobile Number</label>
                     <span></span>
                 </div>
+                
                 <div class="item-nine">
-                    
+                    <hr style="width: 90%; border: none; height: 1px; background-color: white;">
+                    <input type="checkbox" name="" id="">
+                    <label for="">By checking here and Continuing I agree to the Master <a href="#">Terms and Condition</a></label><br>
+                    <input type="button" value="Continue">
                 </div>
 
             </div>
