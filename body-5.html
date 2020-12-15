@@ -37,14 +37,14 @@
         
         
         .one{
-            background-color: cadetblue;
-            height: 30em;
+            background-color: #342561;
+            height: 10em;
             grid-area: sect1;
         }
         .two{
             grid-area: sect2;
-            background-color: cornflowerblue;
-            height: 30em;
+            background-color: #342561;
+            height: 35em;
         }
         footer{
             grid-area: footer;
@@ -490,6 +490,11 @@ footer{
 }
     </style>
     <style>
+        .one{
+            display: grid;
+            justify-content: center;
+            
+        }
         .one  .content{
             width: 20em;
             margin-top: 6em;
@@ -497,18 +502,83 @@ footer{
             grid-template-columns: auto auto auto auto auto;
             /* grid-template-rows: auto;
             grid-template-areas: ; */
+            justify-content: center;
         }
+        
+        
         .one .content h1{
             margin: 0em;
         }
+        .one .content i {
+            color: #6E6E6E;
+        }
+        .one .content h1:first-child i{
+            color: white;
+        }
         .one .content div{
-            margin-top: 13px;
+            margin: 13px 15px 0px 15px;
             height: 2px;
             width: 5em;
-            background-color: black;
+            background-color: #6E6E6E;
+
             /* position: absolute; */
             /* left: 0; */
             /* top: 50%; */
+        }
+        .two{
+            display: grid;
+            
+            grid-template-columns: 15% auto 30%;
+            grid-template-areas: 
+            ". contentbox .";
+            justify-content: center;
+        }
+        .two .content{
+            grid-area: contentbox;
+            height: 33.5em;
+            width: 47em;
+            background-color: #23164B;
+            justify-content: center;
+        }
+    </style>
+    <style>
+        .two .content .input-field{
+            margin-top: 2em;
+            position: relative;
+            height: 40px;
+            width: 15em;
+        }
+        .two .content .input-field input[type="text"]{
+            position: absolute;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            
+            /* box-shadow: none; */
+            font-size: 18px;
+            color: white;
+            width: 15em;
+        }
+        .input-field label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #555;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+        .input-field input[type="text"]:focus + input[type="text"]{
+            outline: black;
+        }
+        .input-field input[type="text"]:focus + label,
+        .input-field input[type="text"]:valid + label{
+            transform: translateY(-25px);
+            font-size: 15px;
+            color: #00FFF5;
+            background: #15416B;
+            
         }
     </style>
 </head>
@@ -901,12 +971,12 @@ footer{
                     <i class="fas fas fa-chevron-circle-right"></i>
 
                 </h1>
-                <div></div>
+                <div class="first-line"></div>
                 <h1 >
                     <i class="far fas fa-circle"></i>
     
                 </h1>
-                <div></div>
+                <div class="second-line"></div>
                 <h1>
                     <i class="far fas fa-circle"></i>
                 </h1>
@@ -918,7 +988,49 @@ footer{
         
         
         <section class="two">
+            <div class="content">
+                <div class="item-one">
+                    <h1><span>1</span> Account Details</h1>
+                    
+                </div>
+                <div class="item-two">
+                    <p>Already have an Account?  <a href="#">LogIn</a> </p>
+                </div>
+                <div class="input-field item-three ">
+                    <input type="text" name="" required="">
+                    <label for="">First Name</label>
+                    <span></span>
+                </div>
+                <div class="input-field item-four">
+                    <input type="text" name="" required="">
+                    <label for="">Last Name</label>
+                    <span></span>
+                </div>
+                <div class="input-field item-five">
+                    <input type="text" name="" required="">
+                    <label for="">Email</label>
+                    <span></span>
+                </div>
+                <div class="input-field item-six">
+                    <input type="text" name="" required="">
+                    <label for="">Confirm Email</label>
+                    <span></span>
+                </div>
+                <div class="input-field item-seven">
+                    <input type="text" name="" required="">
+                    <label for="">Country</label>
+                    <span></span>
+                </div>
+                <div class="input-field item-eight">
+                    <input type="text" name="" required="">
+                    <label for="">Mobile Number</label>
+                    <span></span>
+                </div>
+                <div class="item-nine">
+                    
+                </div>
 
+            </div>
         </section>
         
         
