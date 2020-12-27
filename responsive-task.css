@@ -1,0 +1,260 @@
+.tatsu-inline-text,
+.tatsu-typed-text-wrap,
+
+.tatsu-normal-button
+{
+	
+	padding-left:30px;
+	padding-right:40px
+}
+
+
+
+@media only screen and (max-width: 550px) and (min-width: 530px)
+{
+		#sobremi .tatsu-folmufki7d2la9e8.tatsu-column
+	{
+		height:650px;
+	}
+		#sobremi .tatsu-column-pad
+	{
+		padding-left:5%;
+		padding-right:5%;
+		padding-top: 36px;
+		padding-bottom:36px;
+	}
+	
+	
+	.contact_form .field_name,
+	.contact_form .field_email,
+	.contact_form .field_subject,
+	.contact_form .field_comment,
+	.contact_form .submit-fieldset
+	{
+		margin-left:24px;
+		margin-right:24px;
+	}
+	
+		.tatsu-module.tatsu-text-block-wrap.tatsu-REphAqEOP p
+	{
+		margin-left:24px;
+		margin-right:24px;
+	}  
+}
+
+@media only screen and (max-width: 500px) and (min-width:300px)
+{
+	.tatsu-inline-text,
+	.tatsu-typed-text-wrap,
+	
+	.tatsu-normal-button
+	{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	
+
+	
+	#tecnica .tatsu-text-inner{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	.special-heading-wrap{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	#sobremi .tatsu-folmufki7d2la9e8.tatsu-column .tatsu-column-bg-image
+	{
+		height:450px;
+	}
+		#sobremi .tatsu-column-pad
+	{
+		padding-left:5%;
+		padding-right:5%;
+		padding-top: 36px;
+		padding-bottom:36px;
+	}
+	
+	.contact_form .field_name,
+	.contact_form .field_email,
+	.contact_form .field_subject,
+	.contact_form .field_comment,
+	.contact_form .submit-fieldset
+	{
+		margin-left:16px;
+		margin-right:16px;
+	}
+	
+	.tatsu-module.tatsu-text-block-wrap.tatsu-REphAqEOP p
+	{
+		margin-left:16px;
+		margin-right:16px;
+	}  
+}
+
+@media only screen and (max-width: 850px) and (min-width:650px)
+{
+	.tatsu-inline-text,
+	.tatsu-typed-text-wrap,
+
+	.tatsu-normal-button
+	{
+
+		padding-left:32px;
+		padding-right:0px
+	}
+	
+	.tatsu-foexunx10m42hy39 .tatsu-inline-text,
+	.tatsu-foexunx10m42hy39.tatsu-typed-text-wrap,
+	.tatsu-foexunx10m42hy39.tatsu-normal-button
+	{
+		padding-left:0px;
+		padding-right:16px;
+	}
+	
+	.tatsu-medium-gutter > .tatsu-row > .tatsu-column
+	{
+		padding:0px 15px !important;
+	}
+	
+		#tecnica .tatsu-text-inner
+	{
+		padding-left:24px;
+		padding-right:24px;
+	}
+	
+	.special-heading .special-h-tag
+	{
+		padding-left:24px;
+		padding-right:24px;
+	}
+	.special-heading-wrap{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+
+	
+	.tatsu-fohaxm4la2crzk4u.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+		.tatsu-fohaxm4ldfb6saio.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4lge9oukrq.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4ljb1rtjzq.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4lmnfg8bh6.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4lpldrc7i8.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4lshbd00h2.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad,
+	.tatsu-fohaxm4lvjbkbw0l.tatsu-column > .tatsu-column-inner > .tatsu-column-pad-wrap > .tatsu-column-pad{
+		padding:40px 20px 40px 20px !important;
+	}
+/* 	.tatsu-fof2jmz8t3765e6 .tatsu-single-image img .tatsu-single-image-inner */
+	.tatsu-fof2jmz8t3765e6  img[src$=".svg"]
+	{
+		height:150px !important;
+		width:150px !important;
+	}
+	.tatsu-fof2jmz8tdd9oxed .tatsu-single-image img
+	{
+		margin-left:25px;
+	}
+	#sobremi  .tatsu-row > .tatsu-folmufki7d2la9e8.tatsu-column
+	
+	{
+		margin-bottom:0px;
+		margin-left:24px;
+		margin-right:24px;
+		width:100%;
+		height:100%;
+	}
+	
+	#sobremi .tatsu-row > .tatsu-folmufki7v269hkl.tatsu-column
+	{
+		margin-top:0px;
+		margin-left:24px;
+		margin-right:24px;
+		margin-bottom:24px;
+		width:100%
+	}
+	
+	
+	#sobremi .tatsu-column-pad
+	{
+		padding-left:5%;
+		padding-right:5%;
+		padding-top: 36px;
+		padding-bottom:36px;
+	}
+	
+	.tatsu-fohaxm4mj0dmlr7k .tatsu-section-overlay
+	{
+		mix-blend-mode:none;
+	}
+	#contact{
+		margin-top:65em;
+		margin-left:24px;
+		margin-right:24px;
+		z-index:1;
+		width:94%;
+	}
+}
+
+@media only screen and (max-width: 300px) 
+{
+	.page-title-module-custom .page-title-custom
+	{
+		margin-left:16px;
+	}
+	.mobile-nav-controller-wrap
+	{
+		margin-right:15px;
+	}
+	.tatsu-inline-text,
+	.tatsu-typed-text-wrap,
+	
+	.tatsu-normal-button
+	{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	
+
+	
+	#tecnica .tatsu-text-inner{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	.special-heading-wrap .caption,
+	.special-heading-wrap .special-h-tag{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	#sobremi .tatsu-folmufki7d2la9e8.tatsu-column .tatsu-column-bg-image
+	{
+		height:450px;
+	}
+		#sobremi .tatsu-column-pad
+	{
+		padding-left:5%;
+		padding-right:5%;
+		padding-top: 36px;
+		padding-bottom:36px;
+	}
+	
+	.contact_form .field_name,
+	.contact_form .field_email,
+	.contact_form .field_subject,
+	.contact_form .field_comment,
+	.contact_form .submit-fieldset
+	{
+		margin-left:16px;
+		margin-right:16px;
+	}
+	
+	.tatsu-module.tatsu-text-block-wrap.tatsu-REphAqEOP p
+	{
+		margin-left:16px;
+		margin-right:16px;
+	}  
+}
