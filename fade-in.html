@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container
+    {
+        margin-top: 110vh;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1em;
+    }
+    .img
+    {
+
+        background-image: url(../bag-n-brand/img/bag-n-brand-product/bag-n-brand\(13\).jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .img2
+    {
+        background-image: url(../bag-n-brand/img/bag-n-brand-product/bag-n-brand\(13\).jpg);
+    }
+    /* .fade-in
+    {
+        opacity: 0; 
+        transition: opacity 300ms ease-in;
+    } */
+    /* .fade-in.appear
+    {
+        opacity: 1;
+    } */
+    .from-left
+    {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    .from-right
+    {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    .from-left,
+    .from-right
+    {
+        transition: transform 400ms ease-in, opacity 300ms ease-in;
+    }
+    .from-left.appear,
+    .from-right.appear
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="img img1 slide-in from-left">
+
+        </div>
+        <div class="img img2 slide-in from-right">
+
+        </div>
+    </div>
+</body>
+<script>
+    // var faders = document.querySelectorAll(".fade-in");
+    var slideIn = document.querySelectorAll(".slide-in");
+    var appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -250px 0px"
+    };
+    var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    },appearOptions);
+
+    // faders.forEach(fader => {
+    //     appearOnScroll.observe(fader);
+    // });
+
+    slideIn.forEach(slideIn => {
+        appearOnScroll.observe(slideIn);
+    })
+</script>
+</html>
