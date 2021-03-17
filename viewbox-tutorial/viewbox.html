@@ -193,6 +193,7 @@
     <style>
         .one
         {
+            margin: 10em auto ;
             height: 200px;
             width: 200px;
             border: 2px solid red;
@@ -204,10 +205,10 @@
             
             border: 2px solid peru;
             position: absolute;
-            top: -150px;
-            left: -150px;
-            height: 500px;
-            width: 500px;
+            top: -125px; /* maintain the ratio with two's height to align the image center in Y axis*/
+            left: -125px;  /* maintain the ratio with two's width to align the image center in X axis */
+            height: 450px; /* increase or decrease height to zoom in or out in Y axis*/
+            width: 450px;  /* increase or decrease width to zoom in or out in X axis*/
         }
         img
         {
