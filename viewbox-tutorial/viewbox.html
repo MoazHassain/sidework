@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewBox</title>
+
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .experiment
+    {
+        width: 304px;
+        height: 304px;
+        border: 2px solid red;
+    }
+    .experiment-two
+    {
+        width: 204px;
+        height: 204px;
+        border: 2px solid red;
+    }
+    .experiment-two img
+    {
+        /* width: 100%;
+        height: 100%; */
+        /* object-fit: cover; */
+    }
+    .bg-img
+    {
+        background-image: url(./bag-n-brand\(1\).jpg);
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+</style>
+<body>
+    <svg viewBox="0 0 300 300" class="experiment">
+        <circle r="100" cx="150" cy="150"></circle>
+        <!-- <path ></path> -->
+    </svg>
+
+    <div viewBox="100 100 100 100" class="experiment-two">
+        <img src="./bag-n-brand(1).jpg" alt="">
+        <!-- <div class="bg-img">
+
+        </div> -->
+    </div>
+
+    <!-- <svg viewBox="0 0 300 300" class="experiment">
+        <circle r="100" cx="150" cy="150"></circle>
+        <g>
+            
+        </g>
+    </svg> -->
+</body>
+</html>
