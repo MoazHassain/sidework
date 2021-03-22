@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shake</title>
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    p
+    {
+        text-align: center;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font: 24px;
+    }
+</style>
+<style>
+    /* https://animista.net/ */
+    .shake-horizontal 
+    {
+        -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    @-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+    80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+    }
+    90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+    }
+    }
+    @keyframes shake-horizontal 
+    {
+        0%,
+        100% {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+        }
+        10%,
+        30%,
+        50%,
+        70% {
+            -webkit-transform: translateX(-10px);
+                    transform: translateX(-10px);
+        }
+        20%,
+        40%,
+        60% {
+            -webkit-transform: translateX(10px);
+                    transform: translateX(10px);
+        }
+        80% {
+            -webkit-transform: translateX(8px);
+                    transform: translateX(8px);
+        }
+        90% {
+            -webkit-transform: translateX(-8px);
+                    transform: translateX(-8px);
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <button><p class="text">Hello Moaz</p></button>
+    </div>
+</body>
+<script>
+    var selectedText = document.querySelector(".text");
+    var shakeAnimation = document.querySelector(".shake-horizontal ");
+
+    selectedText.addEventListener("click", function(){
+        // console.log(123);
+        selectedText.classList.toggle("shake-horizontal");
+    });
+
+</script>
+</html>

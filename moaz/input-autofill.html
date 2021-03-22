@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input
+    {
+        background-color: tan;
+        color: white;
+    }
+    /* input:-webkit-autofill { 
+        -webkit-box-shadow:0 0 0 50px tan inset;
+        -webkit-text-fill-color: #fff;
+        
+    } */
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.5) inset;
+    }
+</style>
+<body>
+    <div>
+        <input type="email" name="email" id="" class="email">
+        <input type="submit" value="send">
+    </div>
+</body>
+</html>
