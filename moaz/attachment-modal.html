@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo:regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/header-footer.css">
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+    }
+    .container 
+    {
+        height: 150vh;
+        /* background-color: rosybrown; */
+        line-height: 100vh;
+        
+        text-align: center;
+
+    }
+    .container button
+    {
+        transform: translateY(-50%);
+    }
+    .attachment-modal-bg
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .attachment-modal
+    {
+        width: 50%;
+        min-height: 50%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    .attachment-modal .side-bar
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 100%;
+        width: 56px;
+        overflow: hidden;
+        overflow-y: scroll;
+        transition: 0.3s;
+    }
+    .attachment-modal .side-bar:hover
+    {
+        width: 30%;
+        
+    }
+    .attachment-modal .side-bar::-webkit-scrollbar
+    {
+        display: none;
+    }
+    .side-bar div
+    {
+        white-space: nowrap;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .side-bar i
+    {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        
+        padding: 10px;
+        text-align: center;
+        margin: 5px 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <button>Attach file</button>
+    </div>
+    <div class="attachment-modal-bg">
+        <div class="attachment-modal">
+            <div class="side-bar">
+                <div>
+                    <i class="fas fa-paperclip"></i> <span>My Device</span>
+                </div>
+                <div>
+                    <i class="fas fa-link"></i> <span>Link(URL)</span>
+                </div>
+                <div>
+                    <i class="fas fa-search"></i> <span>Web Search</span>
+                </div>
+                <div>
+                    <i class="fas fa-camera"></i> <span>Take Photo</span>
+                </div>
+                <div>
+                    <i class="fab fa-google-drive"></i> <span>Goole Drive</span>
+                </div>
+                <div>
+                    <i class="fab fa-dropbox"></i> <span>Dropbox</span>
+                </div>
+                <div>
+                    <i class="fab fa-instagram"></i> <span>Instagram</span>
+                </div>
+                <div>
+                    <i class="far fa-envelope"></i> <span>Gmail</span>
+                </div>
+                <div>
+                    <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+                </div>
+                <div>
+                    <i class="fas fa-box-open"></i> <span>Box</span>
+                </div>
+                <div>
+                    <i class="fas fa-cloud"></i> <span>OneDrive</span>
+                </div>
+                <div>
+                    <i class="fas fa-cloud"></i> <span>OneDrive Business</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
