@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
+</head>
+<style>
+    *
+    {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+<body>
+    <div id="jstree-tree"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+<script>
+    var jsonData = [
+    {
+        id  : 1,
+        text : "Folder 1",
+        type: "folder",
+        state : {
+        selected  : false
+        },
+        children    : [
+        {
+            id  : 2,
+            text : "Sub File 1",
+            type: "file",
+            state : {
+            selected  : false
+            },  
+        },
+        {
+            id  : 3,
+            text : "Sub Folder 1 ",
+            type: "folder",
+            state : {
+            selected  : false
+            },  
+        }
+        ]
+    }, 
+    {
+        id: 4,
+        text : "File 1",
+        type: "file",
+        state : {
+        selected : true
+        },
+        children : []
+    }
+    ];
+
+    function getFolderContextMenu($node, tree)
+		{
+			return {
+				"Create": {
+					"separator_before": false,
+					"separator_after": true,
+					"label": "Create",
+					"action": false,
+					"submenu": {
+						"File": {
+							"seperator_before": false,
+							"seperator_after": false,
+							"label": "File",
+							action: function (obj) {
+								$node = tree.create_node($node, { text: 'New File', type:'file' });
+								tree.deselect_all();
+								tree.select_node($node);
+							}
+						},
+						"Folder": {
+							"seperator_before": false,
+							"seperator_after": false,
+							"label": "Folder",
+							action: function (obj) {
+								$node = tree.create_node($node, { text: 'New Folder', type:'folder' });
+								tree.deselect_all();
+								tree.select_node($node);
+							}
+						}
+					}
+				},
+				"Rename": {
+					"separator_before": false,
+					"separator_after": false,
+					"label": "Rename",
+					"action": function (obj) {
+						tree.edit($node);                                    
+					}
+				},
+				"Remove": {
+					"separator_before": false,
+					"separator_after": false,
+					"label": "Remove",
+					"action": function (obj) {
+						tree.delete_node($node);
+					}
+				}
+			};
+		}
+		
+		function getFileContextMenu($node, tree)
+		{
+			return {
+				"Rename": {
+					"separator_before": false,
+					"separator_after": false,
+					"label": "Rename",
+					"action": function (obj) {
+						tree.edit($node);                                    
+					}
+				},
+				"Remove": {
+					"separator_before": false,
+					"separator_after": false,
+					"label": "Remove",
+					"action": function (obj) {
+						tree.delete_node($node);
+					}
+				}
+			};
+		}
+		
+
+
+    $('#jstree-tree')
+    .jstree({
+    core: {
+        data: jsonData,
+        "themes" : {
+            "variant" : "medium"
+        },
+        "check_callback" : true
+    },
+    types: {
+        "folder": {
+        "icon" : "./icon/folder_shared-black-18dp.svg"
+        },
+        "file": {
+        "icon" : "./icon/text_snippet-black-18dp.svg"
+        },
+        "default" : {
+            
+        }
+    },
+    
+    plugins: ["wholerow", "search", "themes", "types", "contextmenu" ],
+    "wholerow" : {
+        "visible" : false
+    },
+    "checkbox" : {
+        "keep_selected_style" : true,
+        "visible" : false
+    },
+    "contextmenu": {
+        "items": function ($node) {
+            var tree = $("#jstree-tree").jstree(true);
+            if($node.type === 'file')
+                return getFileContextMenu($node, tree);
+            else
+                return getFolderContextMenu($node, tree);                        
+        }
+    }
+
+
+    });
+    
+</script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jstree</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="jstree-container">
+        <ul>
+            <li class="root node folder">Root node 1
+              <ul>
+                <li class="child_node_1 node folder">Child node 1</li>
+                <li class="child_node_1 node file">Child node 2</li>
+              </ul>
+            </li>
+            <li class="root node file" >Root node 2</li>
+          </ul>
+    </div>
+    <button type="submit">Submit</button>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+
+<script>
+    $(function () {
+        
+        $('.jstree-container').jstree();
+        // 7 bind to events triggered on the tree
+        $('.jstree-container').on("changed.jstree", function (e, data) {
+        console.log(data.selected);
+        });
+        // 8 interact with the tree - either way is OK
+        $('button').on('click', function () {
+        $('.jstree-container').jstree(true).select_node('child_node_1');
+        $('.jstree-container').jstree('select_node', 'child_node_1');
+        $.jstree.reference('.jstree-container').select_node('child_node_1');
+        });
+    });
+    $('.jstree-container').jstree({
+        "core" : {
+            "themes" : {
+            "variant" : "medium"
+            }
+        },
+        "checkbox" : {
+            "keep_selected_style" : true
+        },
+        "plugins" : [ "wholerow", "checkbox" ]
+    });
+
+
+    var nodefolder = $('.jstree-container').jstree(true).get_node(".folder");
+    $(".jstree-container").jstree(true).set_icon(nodefolder, "./icon/perm_media-black-18dp.svg");
+
+    var nodefile = $('.jstree-container').jstree(true).get_node("li li.file");
+    $(".jstree-container").jstree(true).set_icon(nodefile, "./icon/text_snippet-black-18dp.svg");
+
+</script>
+
+
+<!-- <script>
+    $('#using_json_2').jstree({ 'core' : {
+    'data' : [
+       { "id" : "ajson1", "parent" : "#", "text" : "Simple root node" },
+       { "id" : "ajson2", "parent" : "#", "text" : "Root node 2" },
+       { "id" : "ajson3", "parent" : "ajson2", "text" : "Child 1" },
+       { "id" : "ajson4", "parent" : "ajson2", "text" : "Child 2" },
+    ]
+} });
+</script> -->
+</html>
